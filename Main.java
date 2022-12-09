@@ -80,8 +80,10 @@ public class Main
         double employee_CTC;
         int OT_Hours;
         Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Employee Details");
         
-        System.out.println("Enter Employee Full Name");
+        System.out.println("Enter Employee  Name");
         employee_Name=sc.nextLine();
         
         System.out.println("Enter Employee ID");
