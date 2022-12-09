@@ -1,4 +1,14 @@
 import java.util.*;
+class CTC{
+    public double base,allowances,insurance,joining,relocation;
+    CTC(double b,double a,double i,double j,double r){
+        base=b;
+        allowances=a;
+        insurance=i;
+        joining=j;
+        relocation=r;
+    }
+}
 
 
 class Employee_Paycheck{
@@ -13,6 +23,7 @@ class Employee_Paycheck{
         ctc=c;
         othours=o;
     }
+
     
     void getDetails(){
         System.out.println("Employee Details : ");
