@@ -80,10 +80,20 @@ public class Main
         double employee_CTC;
         int OT_Hours;
         Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Enter Employee Name");
         employee_Name=sc.nextLine();
+        
+        System.out.println("Enter Employee ID");
         employee_Id=sc.nextLine();
+        
+        System.out.println("Enter Employee Email");
         employee_Email=sc.nextLine();
+        
+        System.out.println("Enter Employee CTC");
         employee_CTC=sc.nextDouble();
+        
+        System.out.println("Enter Employee OverTime Hours");
         OT_Hours=sc.nextInt();
         
         Employee_Paycheck e = new Employee_Paycheck(employee_Id,employee_Name,employee_Email,employee_CTC,OT_Hours);
