@@ -81,7 +81,7 @@ public class Main
         int OT_Hours;
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Enter Employee Name");
+        System.out.println("Enter Employee Full Name");
         employee_Name=sc.nextLine();
         
         System.out.println("Enter Employee ID");
