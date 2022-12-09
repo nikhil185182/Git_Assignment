@@ -52,6 +52,23 @@ class Employee_Paycheck{
         return k;
     }
     
+    void getTax_Details(double income){
+        double tax=0;
+        if (income >= 250000 && income <= 500000){
+            tax = tax + 0.05 * (income - 250000);
+        }
+
+        if (income >= 500000 && income <= 1000000){
+            tax = tax + 0.20 * (income - 500000);
+        }
+
+        if (income >= 1000000){
+            tax = tax + 0.30 * (income - 1000000);
+        }
+        
+        System.out.println("Total tax = "+tax);
+    }
+    
 }
 
  
@@ -71,8 +88,11 @@ public class Main
         
         Employee_Paycheck e = new Employee_Paycheck(employee_Id,employee_Name,employee_Email,employee_CTC,OT_Hours);
         e.getDetails();
+        
 
-          CTC c = e.getCTC_Details();
+        CTC c = e.getCTC_Details();
+        
+        e.getTax_Details(c.base+c.allowances);
         
     }
 }
