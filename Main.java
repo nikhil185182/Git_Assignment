@@ -68,7 +68,21 @@ class Employee_Paycheck{
         
         System.out.println("Total tax = "+tax);
     }
-    
+    void getOverTime_Details(double base)
+    {
+	int comp_offs=0;
+	double ot_pay=0.0;
+	if(othours>30 )
+	{
+		comp_offs=((othours-30)*2)/8;
+		ot_pay=(((base/12)/20)/8)*30+(((base/12)/20)/16)*30;
+	}
+	else
+	{
+		ot_pay=(((base/12)/20)/8)*othours+(((base/12)/20)/16)*othours;
+	}
+	System.out.println(name+" holding id "+id+" has worked over time for "+othours+" hours and earned Rs. "+ot_pay+" with "+comp_offs+" comp offs in a month");
+    }
     
 }
 
@@ -106,6 +120,6 @@ public class Main
         CTC c = e.getCTC_Details();
         
         e.getTax_Details(c.base+c.allowances);
-        
+        e.getOverTime_Details(c.base);
     }
 }
